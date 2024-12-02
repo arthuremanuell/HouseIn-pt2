@@ -15,6 +15,16 @@ body {
     padding-top: 20px;
     height: 100vh;  /* Garantir que a sidebar ocupe toda a altura */
 }
+.logout-btn {
+    color: #e74c3c; /* Cor vermelha */
+    font-size: 24px; /* Ajuste o tamanho do ícone, se necessário */
+    text-decoration: none; /* Remove sublinhado */
+    transition: color 0.3s ease; /* Suaviza a troca de cor */
+}
+
+.logout-btn:hover {
+    color: #c0392b; /* Vermelho mais escuro no hover */
+}
 
 .sidebar img {
     border-radius: 50%;
@@ -80,7 +90,22 @@ body {
     font-weight: 700;
     margin: 0;
 }
+.delete-btn {
+    background-color: #074d97; /* Azul padrão */
+    color: white; /* Cor do texto */
+    border: none;
+    padding: 5px 10px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
 
+
+.delete-btn:hover {
+    background-color: #0056b3; /* Azul mais escuro no hover */
+    transform: scale(1.05); /* Pequeno aumento no hover */
+}
 .content .header p {
     font-size: 14px;
     color: #666;

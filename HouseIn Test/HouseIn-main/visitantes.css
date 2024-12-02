@@ -37,8 +37,8 @@ body {
 .logo {
     float: right;
     margin-top: -140px;
-    width: 150px;
-    height: 170px;
+    width: 200px;
+    height: 250px;
 }
 
 /* Estilos do modal */
@@ -96,8 +96,14 @@ body {
     border-radius: 8px;
     cursor: pointer;
     width: 100%; /* Torna o botão maior */
-    font-size: 1px;
+    font-size: 16px;
     transition: background-color 0.3s;
+}
+.logout-btn {
+    color: #e74c3c; /* Cor vermelha */
+    font-size: 24px; /* Ajuste o tamanho do ícone, se necessário */
+    text-decoration: none; /* Remove sublinhado */
+    transition: color 0.3s ease; /* Suaviza a troca de cor */
 }
 
 #save-visitor:hover {
