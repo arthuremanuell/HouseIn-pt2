@@ -1,0 +1,214 @@
+/* Estilo do body e da sidebar para não afetar o layout principal */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    height: 100vh;
+    overflow: hidden; /* Evita o scroll de fundo quando o modal é aberto */
+}
+
+/* Sidebar fixa à esquerda */
+.sidebar {
+    width: 250px;
+    background: linear-gradient(to bottom, #2c3e50, #3498db);
+    color: white;
+    padding: 20px;
+    box-sizing: border-box;
+    position: fixed; /* A sidebar permanece fixa na tela */
+    height: 100%;
+    top: 0;
+    left: 0;
+}
+.profile{
+    border-radius: 50%;
+    padding-left: px;
+}
+/* O conteúdo principal agora é deslocado para a direita da sidebar */
+.content {
+    flex: 1;
+    padding: 20px;
+    margin-left: 250px; /* Deixa o espaço para a sidebar */
+    box-sizing: border-box;
+    overflow-y: auto; /* Permite o scroll caso o conteúdo exceda a altura da tela */
+}
+
+/* Estilo do logo, sem alteração */
+.logo {
+    float: right;
+    margin-top: -140px;
+    width: 150px;
+    height: 170px;
+}
+
+/* Estilos do modal */
+.modal {
+    display: none; /* Inicialmente oculto */
+    position: fixed;
+    z-index: 1000; /* Coloca o modal acima de outros elementos */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Fundo semitransparente */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+  
+        background: #fff;
+        padding: 20px;
+        border-radius: 12px;
+        width: 320px;
+        position: relative;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); 
+        transition: transform 0.3s ease-in-out;
+    }
+
+
+/* Centralizar o texto "Adicionar Visitante" */
+.modal-content h2 {
+    text-align: center; /* Centraliza horizontalmente */
+    font-size: 20px; /* Ajusta o tamanho da fonte */
+    margin-bottom: 20px; /* Espaçamento inferior */
+    color: black; /* Azul personalizado */
+}
+
+/* Estilo dos inputs */
+#visitor-name, #visitor-apartment, #visitor-block {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-sizing: border-box;
+    font-size: 14px;
+}
+
+/* Estilo do botão Salvar */
+#save-visitor {
+    background-color: #0d47a1; /* Cor azul personalizada */
+    color: white;
+    padding: 12px 0;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    width: 100%; /* Torna o botão maior */
+    font-size: 1px;
+    transition: background-color 0.3s;
+}
+
+#save-visitor:hover {
+    background-color: #0b3c73; /* Cor mais escura ao passar o mouse */
+}
+
+/* Estilo do botão Fechar (X) */
+.close-modal {
+    font-size: 32px;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    cursor: pointer;
+    color: #0d47a1; /* Azul padrão */
+    transition: color 0.3s;
+}
+
+.close-modal:hover {
+    color: #e74c3c; /* Vermelho ao passar o mouse */
+}
+
+/* Estilo do botão adicionar visitante */
+.add-visitor {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: #0d47a1;
+    color: white;
+    border-radius: 50%;
+    width: 45px;
+    height: 45px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.add-visitor:hover {
+    background: #34495e;
+}
+
+/* Estilo do container dos cartões de visitante */
+.visitor-cards-container {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Estilo de cada cartão de visitante */
+.visitor-card {
+    background: white;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 16px;
+    margin-bottom: 12px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.delete-visitor button {
+    background-color: #e74c3c;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.3s;
+}
+
+.delete-visitor button:hover {
+    background-color: #c0392b;
+}
+
+/* Estilo da sidebar */
+.sidebar h2 {
+    font-size: 18px;
+    margin: 10px 0 5px;
+    color: white;
+}
+
+.sidebar p {
+    font-size: 14px;
+    margin: 0;
+    color: white;
+}
+
+.sidebar .menu {
+    margin-top: 30px;
+}
+
+.sidebar .menu a {
+    display: block;
+    color: white;
+    text-decoration: none;
+    padding: 10px 0;
+    font-size: 16px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.sidebar .menu a i {
+    margin-right: 10px;
+}
+
+.sidebar .logout {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    color: white;
+}

@@ -1,0 +1,68 @@
+<html>
+ <head>
+  <title>Visitor Management</title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+  <link rel="stylesheet" href="visitantes.css">
+</head>
+<body>
+ <div class="sidebar">
+  <div class="profile">
+   <img alt="Profile Picture" class="profile" height="50" src="ASSETS/=profile.png" width="50"/>
+   <h2>
+    Olá, José Carlos Silva
+</h2>
+<h4>
+    Porteiro
+</h4>
+  </div>
+  <div class="menu">
+   <a href="home.html"><i class="fas fa-door-open"></i>Acesso / Portaria</a>
+   <a href="encomendas.html"><i class="fas fa-box"></i>Encomendas</a>
+   <a href="moradores.html"><i class="fas fa-users"></i>Moradores</a>
+   <a href="visitantes.html"><i class="fas fa-user-friends"></i>Visitantes</a>
+  </div>
+  <div class="logout">
+   <a href="index.html"><i class="fas fa-sign-out-alt"></i></a>
+  </div>
+ </div>
+
+ <div class="content">
+  <h1>Bem vindo, José Carlos Silva!</h1>
+  <p class="date">03 de Novembro de 2024</p>
+  <img alt="Houseit Logo" class="logo" height="50" src="ASSETS/houseIn2.png" width="100"/>
+
+  <div class="visitors">
+   <h2>VISITANTES</h2>
+   <div class="visitor-cards-container">
+      <!-- Cards de visitantes aqui -->
+   </div>
+
+   <div class="add-visitor" id="add-visitor-btn">
+      <i class="fas fa-plus"></i>
+   </div>
+  </div>
+
+  <!-- Modal para adicionar visitante -->
+  <div class="modal" id="visitor-modal">
+    <div class="modal-content">
+      <span class="close-modal" id="close-modal">&times;</span>
+      <h2>Adicionar Visitante</h2>
+      <form id="add-visitor-form">
+        <label for="visitor-name">Nome:</label>
+        <input type="text" id="visitor-name" placeholder="Nome do Morador" required />
+
+        <label for="visitor-apartment">Apartamento:</label>
+        <input type="text" id="visitor-apartment" placeholder="Número do apartamento" required />
+
+        <label for="visitor-block">Bloco:</label>
+        <input type="text" id="visitor-block" placeholder="Bloco" required />
+
+        <button type="submit" id="save-visitor">Salvar</button>
+      </form>
+    </div>
+  </div>
+ </div>
+
+ <script src="visitantes.js"></script>
+</body>
+</html>

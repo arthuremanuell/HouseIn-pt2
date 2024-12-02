@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Moradores</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet"/>
+    <link rel="stylesheet" href="moradores.css">
+</head>
+<body>
+    <!-- Menu Lateral -->
+    <div class="sidebar">
+        <div class="user-info">
+            <img alt="User profile picture" class="profile-img" src="ASSETS/=profile.png"/>
+            <div>
+                <h2 class="user-name">Olá, José Carlos Silva</h2>
+                <h4>Porteiro</h4>
+            </div>
+        </div>
+        <div class="menu">
+            <a href="home.html">
+                <i class="fas fa-lock"></i>
+                Acesso / Portaria
+            </a>
+            <a href="encomendas.html">
+                <i class="fas fa-box"></i>
+                Encomendas
+            </a>
+            <a href="moradores.html">
+                <i class="fas fa-users"></i>
+                Moradores
+            </a>
+            <a href="visitantes.html">
+                <i class="fas fa-user-friends"></i>
+                Visitantes
+            </a>
+        </div>
+        <div class="logout">
+            <a href="index.html">
+                <i class="fas fa-sign-out-alt"></i>
+            </a>
+        </div>
+    </div>
+
+    <!-- Conteúdo Principal -->
+    <div class="main-content">
+        <header>
+            <h1>Moradores</h1>
+        </header>
+
+        <div class="search-bar">
+            <input type="text" placeholder="Buscar por morador" />
+            <button class="search-button">
+                <i class="fas fa-search"></i>
+            </button>
+        </div>
+
+        <div class="residents">
+            <!-- Lista de moradores será exibida aqui -->
+        </div>
+
+        <button class="add-button">
+            <i class="fas fa-plus"></i>
+        </button>
+    </div>
+
+    <!-- Modal de Adicionar Morador -->
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <button id="close-modal">X</button>
+            <h2>Adicionar Morador</h2>
+            <form id="add-resident-form">
+                <label for="visitor-apartment">Morador:</label>
+                <br>
+                
+                <input type="text" id="resident-name" placeholder="Nome do Morador" required />
+                <label for="visitor-apartment">Apartamento:</label>
+                <br>
+                
+                <input type="text" id="apartment-number" placeholder="Número do Apartamento" required />
+                <label for="visitor-apartment">Bloco:</label>
+                <br>
+                
+                <input type="text" id="block" placeholder="Bloco" required />
+                <button type="button" id="add-resident">Adicionar</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="moradores.js"></script>
+</body>
+</html>

@@ -1,0 +1,286 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    display: flex;
+    height: 100vh;
+}
+
+.sidebar {
+    width: 250px;
+    background: linear-gradient(172.8deg, #283A5A 31.85%, #296F89 65.59%, #27C7EA 99.33%);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 20px;
+    height: 100vh;  /* Garantir que a sidebar ocupe toda a altura */
+}
+
+.sidebar img {
+    border-radius: 50%;
+}
+
+.sidebar .user-info {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.sidebar .user-info p {
+    margin: 5px 0;
+}
+
+.sidebar .menu {
+    width: 100%;
+    margin-top: 20px;
+}
+
+.sidebar .menu a {
+    display: flex;
+    align-items: center;
+    padding: 15px 20px;
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.sidebar .menu a:hover {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.sidebar .menu a i {
+    margin-right: 10px;
+}
+
+.sidebar .logout {
+    margin-top: auto;
+    margin-bottom: 20px;
+}
+
+.sidebar .logout a {
+    color: white;
+    text-decoration: none;
+    font-size: 24px;
+}
+
+.content {
+    flex-grow: 1;
+    padding: 20px;
+    width: 100%;
+}
+
+.content .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.content .header h1 {
+    font-size: 24px;
+    font-weight: 700;
+    margin: 0;
+}
+
+.content .header p {
+    font-size: 14px;
+    color: #666;
+    margin: 0;
+}
+
+.content .header .logo {
+    width: 200px;  /* Tamanho da logo ajustado */
+    height: auto;
+}
+
+.content .main {
+    margin-top: 20px;
+}
+
+.content .main h2 {
+    font-size: 20px;
+    font-weight: 700;
+    color: #0d47a1;
+    margin-bottom: 20px;
+}
+
+.content .main .card {
+    background: #f5f5f5;
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.content .main .card .info {
+    font-size: 14px;
+}
+
+.content .main .card .info p {
+    margin: 5px 0;
+}
+
+.content .main .card .status {
+    background: #0d47a1;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 12px;
+}
+
+#open-modal {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: #0d47a1;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 45px;
+    height: 45px;
+    font-size: 24px;
+    cursor: pointer;
+}
+#open-modal:hover{
+    background: #34495e;
+}
+
+#fade, #modal {
+    transition: .5s;
+    opacity: 1;
+    pointer-events: all;
+}
+
+#fade {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    z-index: 5;
+}
+
+#open-modal {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: #0d47a1;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 45px;
+    height: 45px;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+#open-modal:hover {
+    background: #34495e;
+}
+
+#fade, #modal {
+    transition: 0.3s;
+    opacity: 1;
+    pointer-events: all;
+}
+
+#fade {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    z-index: 5;
+}
+
+#modal {
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    z-index: 10;
+    width: 320px; /* Ajustei a largura */
+    max-width: 90%;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+.modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #ccc;
+    margin-bottom: 1rem;
+    padding-bottom: 1rem;
+}
+
+.modal-header h2 {
+    margin: 0;
+    font-size: 18px;
+    color: #333; /* Cor do título */
+    text-align: center;
+    flex-grow: 1; /* Centraliza o texto */
+}
+
+.modal-header button {
+    background: none;
+    border: none;
+    font-size: 20px;
+    color: #0d47a1;
+    cursor: pointer;
+    padding: 0;
+    transition: color 0.3s;
+}
+
+.modal-header button:hover {
+    color: #e74c3c;
+}
+
+.modal-body {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.modal-body input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 14px;
+    box-sizing: border-box;
+}
+
+.modal-body input::placeholder {
+    color: #aaa;
+    font-size: 14px;
+}
+
+.modal-body button {
+    background: #0d47a1;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    padding: 12px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+.modal-body button:hover {
+    background: #0b3c73;
+}
+
+#modal.hide, #fade.hide {
+    opacity: 0;
+    pointer-events: none;
+}
+
+#modal.hide {
+    top: 40%;
+}

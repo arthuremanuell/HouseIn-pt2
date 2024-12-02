@@ -1,0 +1,87 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(to right, #00c6ff, #0072ff); /* Gradiente azul vibrante */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.container {
+    background-color: #ffffff;
+    padding: 25px;
+    border-radius: 15px; /* Bordas mais arredondadas */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1); /* Sombra suave e maior */
+    width: 350px; /* Um pouco mais largo para mais conforto */
+    position: relative;
+    transition: transform 0.3s ease-in-out; /* Efeito de aumento suave */
+}
+
+.container:hover {
+    transform: scale(1.05); /* Leve aumento ao passar o mouse */
+}
+
+.container h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 22px; /* Tamanho maior para o título */
+    color: #283A5A; /* Cor mais suave e séria para o título */
+    font-weight: 600;
+}
+
+.container label {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 14px;
+    color: #555555; /* Cor suave para os labels */
+}
+
+.container input,
+.container select {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 18px;
+    border: 1px solid #ccc;
+    border-radius: 8px; /* Bordas mais arredondadas para inputs */
+    font-size: 14px;
+    background-color: #f7f7f7; /* Fundo suave para os campos */
+    transition: border-color 0.3s ease;
+}
+
+.container input:focus,
+.container select:focus {
+    border-color: #0072ff; /* Cor da borda ao focar */
+    background-color: #eaf5ff; /* Fundo suave azul claro ao focar */
+}
+
+.container button {
+    width: 100%;
+    padding: 12px;
+    background-color: #2783A4; /* Azul suave para o botão */
+    color: white;
+    border: none;
+    border-radius: 8px; /* Bordas arredondadas no botão */
+    font-size: 16px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s ease; /* Efeito de transição */
+}
+
+.container button:hover {
+    background-color: #283A5A; /* Cor mais escura ao passar o mouse */
+}
+
+.close-btn {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    font-size: 18px;
+    color: #2783A4; /* Cor suave para o botão de fechar */
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.close-btn:hover {
+    color: #283A5A; /* Muda para uma cor mais escura ao passar o mouse */
+}

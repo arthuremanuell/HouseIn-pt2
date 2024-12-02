@@ -1,0 +1,26 @@
+<html>
+<head>
+    <title>Adicionar Visitante</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="addvisitantes.css">
+</head>
+<body>
+    <div class="modal">
+        <span class="close">&times;</span>
+        <h2>Adicionar Visitante</h2>
+        <select>
+            <option>Morador</option>
+        </select>
+        <input type="text" placeholder="Nome Visitante">
+        <input type="text" placeholder="Bloco">
+        <input type="text" placeholder="Apartamento">
+        <button onclick="window.location.href = 'confirmarvisitante.html'">Confirmar</button>
+
+    </div>
+    <script>
+        document.querySelector('.close').addEventListener('click', function() {
+            document.querySelector('.modal').style.display = 'none';
+        });
+    </script>
+</body>
+</html>

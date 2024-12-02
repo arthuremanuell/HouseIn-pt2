@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Encomendas</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&amp;display=swap" rel="stylesheet"/>
+    <link rel="stylesheet" href="encomendas.css">
+    <script src="encomendas.js" defer></script>
+</head>
+<body>
+    <div class="sidebar">
+        <img alt="User profile picture" height="50" src="ASSETS/=profile.png" width="50"/>
+        <div class="user-info">
+            <h3><p>Olá, José Carlos Silva</p></h3>
+            <h4>Porteiro</h4>
+            
+        </div>
+        <div class="menu">
+            <a href="home.html"><i class="fas fa-door-open"></i>Acesso / Portaria</a>
+            <a href="#"><i class="fas fa-box"></i>Encomendas</a>
+            <a href="moradores.html"><i class="fas fa-users"></i>Moradores</a>
+            <a href="visitantes.html"><i class="fas fa-user-friends"></i>Visitantes</a>
+        </div>
+        <div class="logout">
+            <a href="index.html"><i class="fas fa-sign-out-alt"></i></a>
+        </div>
+    </div>
+
+    <div class="content">
+        <div class="header">
+            <div>
+                <h1>Bem vindo, José Carlos Silva!</h1>
+                <p>03 de Novembro de 2024</p>
+            </div>
+            <img alt="Houseit logo" class="logo" src="ASSETS/houseIn2.png"/>
+        </div>
+
+        <div class="main">
+            <h2>ENCOMENDAS</h2>
+
+            <!-- Lista de encomendas -->
+            <div id="encomendas-list">
+                <!-- Exemplo de Encomenda -->
+                <div class="card">
+                    <div class="info">
+                        <p><strong>Local:</strong> Local 1</p>
+                        <p><strong>Morador:</strong> João</p>
+                        <p><strong>Bloco:</strong> A</p>
+                        <p><strong>Apartamento:</strong> 101</p>
+                    </div>
+                    <button class="delete-btn">Excluir</button>
+                </div>
+
+                <!-- Outro exemplo de Encomenda -->
+                <div class="card">
+                    <div class="info">
+                        <p><strong>Local:</strong> Local 2</p>
+                        <p><strong>Morador:</strong> Maria</p>
+                        <p><strong>Bloco:</strong> B</p>
+                        <p><strong>Apartamento:</strong> 202</p>
+                    </div>
+                    <button class="delete-btn">Excluir</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal para adicionar encomendas -->
+    <button id="open-modal"><i class="fas fa-plus"></i></button>
+    <div id="fade" class="hide"></div>
+    <div id="modal" class="hide">
+        <div class="modal-header">
+            <h2>Adicionar Encomenda</h2> <button id="close-modal">X</button>
+           
+        </div>
+        <div class="modal-body"> 
+           
+            <label for="Local">Local:</label>
+            <input type="text" id="local" placeholder="Local do produto" required />
+            <label for="visitor-apartment">Morador:</label>
+            <input type="text" id="morador" placeholder="Nome do morador" required />
+            <label for="visitor-apartment">Bloco:</label>
+            <input type="text" id="bloco" placeholder="Bloco" required />
+            <label for="visitor-apartment">Apartamento:</label>
+            <input type="text" id="apartamento" placeholder="Número do apartamento" required />
+           
+            <button id="adicionar">Adicionar</button>
+        </div> 
+       
+    </div>
+
+    <script src="encomendas.js"></script>
+</body>
+</html>

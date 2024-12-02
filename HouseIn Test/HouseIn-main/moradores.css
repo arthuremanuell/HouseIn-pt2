@@ -1,0 +1,259 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    display: flex;
+    height: 100vh;
+    overflow-x: hidden;
+}
+
+.sidebar {
+    width: 250px;
+    background: linear-gradient(172.8deg, #283A5A 31.85%, #296F89 65.59%, #27C7EA 99.33%);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 20px;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+.user-name{
+font-size: 20px;
+}
+
+.sidebar img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%; /* Tornar a imagem redonda */
+    object-fit: cover;
+}
+
+.sidebar .user-info {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.sidebar .user-info p {
+    margin: 5px 0;
+}
+
+.sidebar .menu {
+    width: 100%;
+    margin-top: 20px;
+}
+
+.sidebar .menu a {
+    display: flex;
+    align-items: center;
+    padding: 15px 20px;
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.sidebar .menu a:hover {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.sidebar .menu a i {
+    margin-right: 10px;
+}
+
+.sidebar .logout {
+    margin-top: auto;
+    margin-bottom: 20px;
+}
+
+.sidebar .logout a {
+    color: white;
+    text-decoration: none;
+    font-size: 24px;
+}
+
+.main-content {
+    flex-grow: 1;
+    margin-left: 250px;
+    padding: 20px;
+    background: #f4f4f9;
+}
+
+header h1 {
+    font-size: 24px;
+    font-weight: 700;
+    margin: 0;
+    color: #333;
+}
+
+
+.search-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 20px 0;
+}
+
+.search-bar input {
+    width: 80%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.search-bar button {
+    background-color: #0d47a1;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.search-bar button i {
+    font-size: 20px;
+}
+
+.residents {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.resident-card {
+    background: white;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: calc(33.333% - 10px);
+    box-sizing: border-box;
+}
+
+.resident-card p {
+    margin-bottom: 10px;
+}
+
+.delete-button {
+    background-color: #e74c3c;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-left: 100px; 
+    display: block; 
+}
+.delete-button:hover {
+    background-color: #c0392b;
+}
+
+.add-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: #0d47a1;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 45px;
+    height: 45px;
+    font-size: 24px;
+    cursor: pointer;
+}
+.add-button:hover{
+    background: #34495e;
+}
+ 
+#modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7); 
+    display: none;
+    justify-content: center;
+    align-items: center;
+    transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+}
+
+#modal.show {
+    display: flex;
+    opacity: 1; 
+    visibility: visible;
+}
+
+.modal-content {
+    background: #fff;
+    padding: 20px;
+    border-radius: 12px;
+    width: 350px;
+    position: relative;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); 
+    transition: transform 0.3s ease-in-out;
+}
+
+.modal-content h2 {
+    font-size: 20px;
+    color: #333;
+    font-weight: 600;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+#close-modal {
+    position: absolute;
+    top: 5px; 
+    left: 145px; 
+    font-size: 20px;
+    color: #0d47a1; 
+    border: none;
+    background: none;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+#close-modal:hover {
+    color: #e74c3c; 
+}
+
+.modal-content input,
+.modal-content select {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 14px;
+    background-color: #f9f9f9;
+    transition: border-color 0.3s ease;
+}
+
+.modal-content input:focus,
+.modal-content select:focus {
+    border-color: #0d47a1; 
+    background-color: #eef7ff; 
+}
+
+.modal-content button {
+    width: 100%;
+    padding: 12px;
+    background-color: #0d47a1;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.modal-content button:hover {
+    background-color: #0b3c73; 
+}
